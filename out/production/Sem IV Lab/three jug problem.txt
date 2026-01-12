@@ -1,0 +1,39 @@
+max capacities:
+Jug 1 = 8 lit
+Jug 2 = 5 lit
+Jug 3 = 3 lit
+
+initial state = 8 0 0
+goal state = 4 4 0
+
+steps:
+1. 8 0 0
+2. 3 5 0
+3. 3 2 3
+4. 6 2 0
+5. 6 0 2
+6. 1 5 2
+7. 1 4 3
+8. 4 4 0
+
+
+
+-- This is Three Jug Problem --
+// Here we have to return number of moves it took to solve the problem and
+// if inputs of problem are invalid to solve we have to return
+// "not possible" before proceeding
+
+[hint: use BFS(implement using queue data structure)]
+
+
+-- Key BFS Idea --
+Each state = (a, b, c)
+From a state, we can pour water from one jug to another
+BFS guarantees minimum number of moves
+Use a visited set to avoid infinite loops
+
+-- Invalid / Not Possible Conditions --
+Return "not possible" if:
+1. Any goal jug > its capacity
+2. Total water in goal ≠ total water in initial
+3. BFS exhausts all states without reaching goal
