@@ -1,0 +1,11 @@
+    Using BFS
+
+    initial state: A
+    goal state: H
+
+    A -> B -> D -> G -> I
+    |          \
+    |           H
+    C -> E -> F
+
+    
